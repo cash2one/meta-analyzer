@@ -57,9 +57,12 @@ else
 	echo_info "Threshold of count filter:\t${count_filter}"
 fi
 
-sh bat.step_1.sh > ../log/${owner_tag}.${created_at}/step_1/batch.log
-sh step_1.sh 0 ${control} > ../log/${owner_tag}.${created_at}/step_1/con.task.${control}.log
+echo_info "======================= Step 1 ========================"
+check_do "sh bat.step_1.sh > ../log/${owner_tag}.${created_at}/step_1/batch.log"
+check_do "sh step_1.sh 0 ${control} > ../log/${owner_tag}.${created_at}/step_1/con.task.${control}.log"
 
-sh bat.step_2.sh > ../log/${owner_tag}.${created_at}/step_2/batch.log
+echo_info "======================= Step 2 ========================"
+check_do "sh bat.step_2.sh > ../log/${owner_tag}.${created_at}/step_2/batch.log"
 
-sh output_result.sh
+echo_info "=================== Fetching result ==================="
+check_do "sh output_result.sh"

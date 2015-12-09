@@ -1,37 +1,5 @@
 #!/bin/bash
 
-
-
-function log
-{
-    local __msg=$@
-    local __prefix=[`date +"%Y-%m-%d %H:%M:%S"`]
-    if [ "$LOG_FILE" == "" ] ; then
-        echo "${__prefix}${__msg}"
-    else
-        echo "${__prefix}${__msg}" >>$LOG_FILE
-    fi
-}
-
-function check_return_value
-{
-    if [ $? -eq 0 ] ; then
-        log "[succ]"
-    else
-        log "[fail]"
-        log "[I will exit, sorry!!!]"
-        exit 1
-    fi  
-}
-
-function check_do
-{
-    __cmd=$@
-    log "${__cmd}"
-    ${__cmd}
-    check_return_value
-}
-
 function echo_info
 {
     __msg=$@
@@ -55,6 +23,36 @@ function echo_warning
     echo -e "\033[33mMETA [Warning]\t${timestamp}\t${__msg}\033[0m"    
     echo -e "\033[33mMETA [Warning]\t${timestamp}\t${__msg}\033[0m" >> ../log/${owner_tag}.${created_at}/all.log    
 }
+
+#function log
+#{
+#    local __msg=$@
+#    local __prefix=[`date +"%Y-%m-%d %H:%M:%S"`]
+#    if [ "$LOG_FILE" == "" ] ; then
+#        echo "${__prefix}${__msg}"
+#    else
+#        echo "${__prefix}${__msg}" >>$LOG_FILE
+#    fi
+#}
+
+function check_return_value
+{
+    if [ $? -eq 0 ] ; then
+        echo_info "Process successfully."
+    else
+        echo_error "Process failed."
+        echo_error "I will exit, sorry!!!"
+        exit 1
+    fi  
+}
+
+function check_do
+{
+    __cmd=$@
+    ${__cmd}
+    check_return_value
+}
+
 
 function check_valid_path
 {

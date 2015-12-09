@@ -22,5 +22,5 @@ gnuplot ../../lib/plot_meta.gp
 cd ..
 echo_info "All results have been retrived. Please check /output/${owner_tag}.${created_at}"
 
-rm ../../resource/_tmp_meta_plot.dat
-rm ../../resource/_tmp_avg_plot.dat
+rm ../resource/_tmp_meta_plot.dat
+rm ../resource/_tmp_avg_plot.dat

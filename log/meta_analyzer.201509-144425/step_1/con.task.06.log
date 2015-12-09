@@ -1,0 +1,10 @@
+[32mMETA [Info]	[2015-12-09 14:51:51]	Checking validation of input path: 06[0m
+[32mMETA [Info]	[2015-12-09 14:51:54]	Path /app/ecom/fcr-ad/zhushixiang/medical_bid/bidword_key/near_control/raw_data/wise/06 is valid.[0m
+[32mMETA [Info]	[2015-12-09 14:51:54]	Input path are: /app/ecom/fcr-ad/zhushixiang/medical_bid/bidword_key/near_control/raw_data/wise/06/*/*[0m
+[32mMETA [Info]	[2015-12-09 14:51:54]	Checking existence of output path...[0m
+[33mMETA [Warning]	[2015-12-09 14:51:57]	Warning! Path /app/ecom/fcr-ad/zhushixiang/meta_analyzer_tool/tmp/06 is existed![0m
+Moved to trash: hdfs://nmg01-mulan-hdfs.dmop.baidu.com:54310/app/ecom/fcr-ad/zhushixiang/meta_analyzer_tool/tmp/06
+[32mMETA [Info]	[2015-12-09 14:52:00]	/app/ecom/fcr-ad/zhushixiang/meta_analyzer_tool/tmp/06 was removed successfully.[0m
+[32mMETA [Info]	[2015-12-09 14:52:00]	Hadoop Streaming job started.[0m
+packageJobJar: [mapper.set_tag.py, reducer.merge_key.py] [/home/work/hadoop-client/hadoop/contrib/streaming/hadoop-2-streaming.jar] /tmp/streamjob5252409201347982650.jar tmpDir=null
+[32mMETA [Info]	[2015-12-09 15:00:53]	Hadoop Streaming Job was successful![0m

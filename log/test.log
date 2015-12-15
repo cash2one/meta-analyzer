@@ -1,0 +1,97 @@
+[33mMETA [Warning]	[2015-12-15 12:42:01]	Only 0 parameters are given. Default path/index/filter will be used. if you want to set your own path, 5 parameters are expected at least which represent owner_tag, task_tag, input_base_path, output_base_path, exp_group and control respectively.[0m
+[32mMETA [Info]	[2015-12-15 12:42:01]	==================== Configuration ====================[0m
+[32mMETA [Info]	[2015-12-15 12:42:01]	Owner tag:	zhushixiang[0m
+[32mMETA [Info]	[2015-12-15 12:42:01]	Task tag:	meta_analysis[0m
+[32mMETA [Info]	[2015-12-15 12:42:01]	Input Base path:	/app/ecom/fcr-ad/zhushixiang/medical_bid/bidword_key/fix_control/raw_data/wise[0m
+[32mMETA [Info]	[2015-12-15 12:42:01]	Output Base path:	/app/ecom/fcr-ad/zhushixiang/meta_analyzer_tool[0m
+[32mMETA [Info]	[2015-12-15 12:42:01]	Experimental Group:	08,09,10[0m
+[32mMETA [Info]	[2015-12-15 12:42:01]	Control:	11[0m
+[32mMETA [Info]	[2015-12-15 12:42:01]	Index of key:	0[0m
+[32mMETA [Info]	[2015-12-15 12:42:01]	Index of value:	3[0m
+[32mMETA [Info]	[2015-12-15 12:42:01]	Index of count:	7[0m
+[32mMETA [Info]	[2015-12-15 12:42:01]	Threshold of count filter:	5[0m
+[32mMETA [Info]	[2015-12-15 12:42:01]	======================= Step 1 ========================[0m
+[32mMETA [Info]	[2015-12-15 12:42:01]	Starting Task 0, exp=08[0m
+[32mMETA [Info]	[2015-12-15 12:42:06]	Starting Task 1, exp=09[0m
+[32mMETA [Info]	[2015-12-15 12:42:11]	Starting Task 2, exp=10[0m
+[32mMETA [Info]	[2015-12-15 12:42:16]	Current tasks has reached maximum of batch size. Waitting until current tasks all finish.[0m
+[32mMETA [Info]	[2015-12-15 12:42:16]	PID pool detail as follow:[0m
+[32mMETA [Info]	[2015-12-15 12:42:16]	8939 10319 10808[0m
+[32mMETA [Info]	[2015-12-15 12:44:42]	job complete, job_index = 0, pid = 8939[0m
+[32mMETA [Info]	[2015-12-15 12:46:10]	job complete, job_index = 1, pid = 10319[0m
+[32mMETA [Info]	[2015-12-15 12:46:10]	job complete, job_index = 2, pid = 10808[0m
+[32mMETA [Info]	[2015-12-15 12:46:10]	All batch tasks are finished.[0m
+[32mMETA [Info]	[2015-12-15 12:46:10]	Current tasks has reached maximum of batch size. Waitting until current tasks all finish.[0m
+[32mMETA [Info]	[2015-12-15 12:46:10]	PID pool detail as follow:[0m
+[32mMETA [Info]	[2015-12-15 12:46:10]	8939 10319 10808[0m
+[32mMETA [Info]	[2015-12-15 12:46:10]	All jobs finished![0m
+[32mMETA [Info]	[2015-12-15 12:46:10]	Process successfully.[0m
+[32mMETA [Info]	[2015-12-15 12:46:10]	Checking validation of input path: 11[0m
+[32mMETA [Info]	[2015-12-15 12:46:12]	Path /app/ecom/fcr-ad/zhushixiang/medical_bid/bidword_key/fix_control/raw_data/wise/11 is valid.[0m
+[32mMETA [Info]	[2015-12-15 12:46:12]	Input path are: /app/ecom/fcr-ad/zhushixiang/medical_bid/bidword_key/fix_control/raw_data/wise/11/*/*[0m
+[32mMETA [Info]	[2015-12-15 12:46:12]	Checking existence of output path...[0m
+[33mMETA [Warning]	[2015-12-15 12:46:14]	Warning! Path /app/ecom/fcr-ad/zhushixiang/meta_analyzer_tool/tmp/11 is existed![0m
+Moved to trash: hdfs://nmg01-mulan-hdfs.dmop.baidu.com:54310/app/ecom/fcr-ad/zhushixiang/meta_analyzer_tool/tmp/11
+[32mMETA [Info]	[2015-12-15 12:46:16]	/app/ecom/fcr-ad/zhushixiang/meta_analyzer_tool/tmp/11 was removed successfully.[0m
+[32mMETA [Info]	[2015-12-15 12:46:16]	Hadoop Streaming job started.[0m
+packageJobJar: [mapper.set_tag.py, reducer.merge_key.py] [/home/work/hadoop-client/hadoop/contrib/streaming/hadoop-2-streaming.jar] /tmp/streamjob1526072357811821452.jar tmpDir=null
+15/12/15 12:46:18 INFO mapred.JobClient: class org.apache.hadoop.security.UnixUserGroupInformation
+15/12/15 12:46:19 INFO mapred.JobClient: class org.apache.hadoop.security.UnixUserGroupInformation
+15/12/15 12:46:19 INFO hdfs.FMSClient: Write 37436173108815736 in pipeline 10.75.52.29:7001, 10.75.16.35:7001, 10.75.50.35:7001, 10.75.55.32:7001, 10.75.35.38:7001, 10.73.173.15:7001, 10.73.67.46:7001, 10.73.63.21:7001, 10.73.68.11:7001, 10.73.48.14:7001
+15/12/15 12:46:20 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+15/12/15 12:46:20 INFO compress.LzoCodec: Successfully loaded & initialized native-lzo library
+15/12/15 12:46:20 INFO compress.LzmaCodec: Successfully loaded & initialized native-lzma library
+15/12/15 12:46:20 INFO compress.QuickLzCodec: Successfully loaded & initialized native-quicklz library
+15/12/15 12:46:20 INFO mapred.FileInputFormat: getInputPaths: dirs: hdfs://nmg01-mulan-hdfs.dmop.baidu.com:54310/app/ecom/fcr-ad/zhushixiang/medical_bid/bidword_key/fix_control/raw_data/wise/11/*/*
+15/12/15 12:46:23 INFO mapred.FileInputFormat: Total input paths to process : 100
+15/12/15 12:46:25 INFO mapred.FileInputFormat: after all merge split size =5
+15/12/15 12:46:25 INFO hdfs.FMSClient: Write 6755400980185158 in pipeline 10.75.28.37:7001, 10.75.79.36:7001, 10.73.162.51:7001
+15/12/15 12:46:25 INFO mapred.JobClient: splits size : 5
+15/12/15 12:46:25 INFO hdfs.FMSClient: Write 8444250840449105 in pipeline 10.75.35.52:7001, 10.73.35.42:7001, 10.73.83.20:7001
+15/12/15 12:46:26 INFO split.SplitUtils: create hdfs://nmg01-mulan-hdfs.dmop.baidu.com:54310/app/dc/deva/system/mapred/job_20151126172832_654622/split.done
+15/12/15 12:46:26 INFO hdfs.FMSClient: Write 36310273201248019 in pipeline 10.73.97.50:7001, 10.73.105.13:7001, 10.75.26.40:7001
+15/12/15 12:46:26 INFO mapred.JobClient: Running job: job_20151126172832_654622
+15/12/15 12:46:26 INFO mapred.JobClient: To kill this job, run:
+15/12/15 12:46:26 INFO mapred.JobClient: /home/work/hadoop-client/hadoop/bin/../bin/hadoop job -Dmapred.job.tracker=nmg01-mulan-job.dmop.baidu.com:54311 -kill job_20151126172832_654622
+15/12/15 12:46:26 INFO mapred.JobClient: Tracking URL: http://nmg01-mulan-mapred11.nmg01.baidu.com:8030/jobproxy.jsp?jobid=job_20151126172832_654622
+15/12/15 12:46:44 INFO mapred.JobClient: Total split num: 5
+15/12/15 12:46:44 INFO mapred.JobClient: Total split size: 26783 (bytes)
+15/12/15 12:46:44 INFO mapred.JobClient: Total split time: 5998 (ms)
+15/12/15 12:46:46 INFO mapred.JobClient:  map 0% reduce 0%
+15/12/15 12:47:14 INFO mapred.JobClient:  map 2% reduce 0%
+15/12/15 12:47:24 INFO mapred.JobClient:  map 54% reduce 0%
+15/12/15 12:47:34 INFO mapred.JobClient:  map 80% reduce 0%
+15/12/15 12:47:44 INFO mapred.JobClient:  map 85% reduce 0%
+15/12/15 12:47:54 INFO mapred.JobClient:  map 94% reduce 0%
+15/12/15 12:48:04 INFO mapred.JobClient:  map 100% reduce 0%
+15/12/15 12:48:44 INFO mapred.JobClient:  map 100% reduce 3%
+15/12/15 12:48:54 INFO mapred.JobClient:  map 100% reduce 88%
+15/12/15 12:49:04 INFO mapred.JobClient:  map 100% reduce 98%
+15/12/15 12:50:02 INFO mapred.JobClient: Updating completed job! Ignoring ...
+15/12/15 12:50:02 INFO mapred.JobClient: Updating completed job! Ignoring ...
+15/12/15 12:50:02 INFO mapred.JobClient: Job complete: job_20151126172832_654622
+15/12/15 12:50:03 INFO streaming.StreamJob: Output: /app/ecom/fcr-ad/zhushixiang/meta_analyzer_tool/tmp/11
+[32mMETA [Info]	[2015-12-15 12:50:03]	Hadoop Streaming Job was successful![0m
+[32mMETA [Info]	[2015-12-15 12:50:03]	Process successfully.[0m
+[32mMETA [Info]	[2015-12-15 12:50:03]	======================= Step 2 ========================[0m
+[32mMETA [Info]	[2015-12-15 12:50:03]	Starting Task 0, exp=08, con=11[0m
+[32mMETA [Info]	[2015-12-15 12:50:08]	Starting Task 1, exp=09, con=11[0m
+[32mMETA [Info]	[2015-12-15 12:50:13]	Starting Task 2, exp=10, con=11[0m
+[32mMETA [Info]	[2015-12-15 12:50:18]	Current tasks has reached maximum of batch size. Waitting until current tasks all finish.[0m
+[32mMETA [Info]	[2015-12-15 12:50:18]	PID pool detail as follow:[0m
+[32mMETA [Info]	[2015-12-15 12:50:18]	8120 8406 8810[0m
+[32mMETA [Info]	[2015-12-15 12:52:32]	job complete, job_index = 0, pid = 8120[0m
+[32mMETA [Info]	[2015-12-15 12:52:45]	job complete, job_index = 1, pid = 8406[0m
+[32mMETA [Info]	[2015-12-15 12:52:45]	job complete, job_index = 2, pid = 8810[0m
+[32mMETA [Info]	[2015-12-15 12:52:45]	All batch tasks are finished.[0m
+[32mMETA [Info]	[2015-12-15 12:52:45]	Current tasks has reached maximum of batch size. Waitting until current tasks all finish.[0m
+[32mMETA [Info]	[2015-12-15 12:52:45]	PID pool detail as follow:[0m
+[32mMETA [Info]	[2015-12-15 12:52:45]	8120 8406 8810[0m
+[32mMETA [Info]	[2015-12-15 12:52:45]	All jobs finished![0m
+[32mMETA [Info]	[2015-12-15 12:52:45]	Process successfully.[0m
+[32mMETA [Info]	[2015-12-15 12:52:45]	=================== Fetching result ===================[0m
+[33mMETA [Warning]	[2015-12-15 12:52:45]	The output path is existed. Removing the last result.[0m
+3
+Could not find/open font when opening font "arial", using internal non-scalable font
+[32mMETA [Info]	[2015-12-15 12:52:53]	All results have been retrived. Please check /output[0m
+[32mMETA [Info]	[2015-12-15 12:52:53]	Process successfully.[0m

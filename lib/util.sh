@@ -5,7 +5,7 @@ function echo_info
     __msg=$@
     timestamp=`date +"[%Y-%m-%d %H:%M:%S]"`
     echo -e "\033[32mMETA [Info]\t${timestamp}\t${__msg}\033[0m"    
-    echo -e "\033[32mMETA [Info]\t${timestamp}\t${__msg}\033[0m" >> ../log/${owner_tag}.${created_at}/all.log    
+    echo -e "\033[32mMETA [Info]\t${timestamp}\t${__msg}\033[0m" >> ../log/${owner_tag}.${task_tag}.${created_at}/all.log    
 }
 
 function echo_error
@@ -13,7 +13,7 @@ function echo_error
     __msg=$@
     timestamp=`date +"[%Y-%m-%d %H:%M:%S]"`
     echo -e "\033[31mMETA [Error]\t${timestamp}\t${__msg}\033[0m"    
-    echo -e "\033[31mMETA [Error]\t${timestamp}\t${__msg}\033[0m" >> ../log/${owner_tag}.${created_at}/all.log 
+    echo -e "\033[31mMETA [Error]\t${timestamp}\t${__msg}\033[0m" >> ../log/${owner_tag}.${task_tag}.${created_at}/all.log 
 }
 
 function echo_warning
@@ -21,7 +21,7 @@ function echo_warning
     __msg=$@
     timestamp=`date +"[%Y-%m-%d %H:%M:%S]"`
     echo -e "\033[33mMETA [Warning]\t${timestamp}\t${__msg}\033[0m"    
-    echo -e "\033[33mMETA [Warning]\t${timestamp}\t${__msg}\033[0m" >> ../log/${owner_tag}.${created_at}/all.log    
+    echo -e "\033[33mMETA [Warning]\t${timestamp}\t${__msg}\033[0m" >> ../log/${owner_tag}.${task_tag}.${created_at}/all.log    
 }
 
 #function log

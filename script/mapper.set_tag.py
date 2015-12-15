@@ -1,5 +1,7 @@
 import sys
 
+total_count = 0.0
+
 key_index = int(sys.argv[1])
 value_index = int(sys.argv[2])
 count_index = int(sys.argv[3])
@@ -19,8 +21,11 @@ for line in sys.stdin:
         count = "1"
     else:
         count = line[count_index]
+    # Total count
+    total_count += float(count)
     # Filtering
     if float(count) < count_filter:
         continue
     print "\t".join((key, exp_or_con, value, count))
 
+print "\t".join(("total_count", exp_or_con, "\N", str(total_count)))

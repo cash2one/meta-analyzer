@@ -31,7 +31,7 @@ fi
 
 echo_info "Hadoop Streaming job started."
 ${HADOOP} streaming \
-	-D mapred.job.name="${owner_tag}.meta" \
+	-D mapred.job.name="${owner_tag}.${task_tag}.meta" \
 	-D stream.map.output.field.separator="\t" \
 	-D stream.num.map.output.key.fields=2 \
 	-D map.output.key.field.separator="\t" \

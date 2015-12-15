@@ -33,11 +33,7 @@ fi
 
 echo_info "Hadoop Streaming job started."
 ${HADOOP} streaming \
-	-D mapred.job.name="${owner_tag}.merge" \
-	-D stream.map.output.field.separator="\t" \
-	-D stream.num.map.output.key.fields=1 \
-	-D map.output.key.field.separator="\t" \
-	-D num.key.fields.for.partition=1 \
+	-D mapred.job.name="${owner_tag}.${task_tag}.merge" \
 	-D mapred.reduce.tasks=${step_1_reduce_task_num} \
 	-D mapred.combine.input.format.local.only=false \
 	-D mapred.min.split.size=${min_split_size} \

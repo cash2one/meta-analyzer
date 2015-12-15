@@ -3,7 +3,7 @@ source ../lib/util.sh
 
 cur_dir=`pwd`
 program="step_1.sh"
-batch_size=3
+#batch_size=3
 exp_group=(`echo ${exp_group} | awk 'BEGIN{ FS=",";OFS=" " }{$1=$1;print}'`)
 flag="0"
 task_num=${#exp_group[@]}
@@ -26,7 +26,7 @@ do
 		fi
 
 		echo_info "Starting Task ${j}, exp=${exp_group[${i}]}"
-		sh ${program} 1 ${exp_group[${i}]}> ../log/${owner_tag}.${created_at}/step_1/exp.task.${exp_group[$[i]]}.log 2>&1 &
+		sh ${program} 1 ${exp_group[${i}]}> ../log/${owner_tag}.${task_tag}.${created_at}/step_1/exp.task.${exp_group[$[i]]}.log 2>&1 &
 		pid_pool[${j}]=$!
 		sleep 5
 
